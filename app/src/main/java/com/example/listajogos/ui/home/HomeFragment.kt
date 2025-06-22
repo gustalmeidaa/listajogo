@@ -7,10 +7,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.Button
 import android.widget.Spinner
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.example.listajogos.DBHelper
 import com.example.listajogos.R
 import com.example.listajogos.databinding.FragmentHomeBinding
 
@@ -58,11 +60,24 @@ class HomeFragment : Fragment() {
             }
         }
 
+        binding.btnCadastrar.setOnClickListener {
+            cadastrar()
+        }
+
         return root
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    private fun cadastrar(){
+        val db = DBHelper(this.requireContext(), null)
+        val nomeJogo = binding.nomeJogo.text.toString()
+        val plataforma = binding.listaPlataformas.selectedItem.toString()
+        db.addName(nomeJogo, plataforma)
+        Toast.makeText(this.requireContext(),nomeJogo + " adicionado no banco!",Toast.LENGTH_LONG).show()
+        binding.nomeJogo.text.clear()
     }
 }
