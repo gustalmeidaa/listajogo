@@ -15,7 +15,6 @@
         android:scaleType="centerCrop"
         android:layout_marginBottom="12dp"
         android:contentDescription="@string/nav_header_desc"
-        android:background="@drawable/image_circle_background"
         app:srcCompat="@mipmap/ic_launcher_round" />
 
     <TextView

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@+id/nav_login">
 
     <fragment
         android:id="@+id/nav_home"
@@ -13,13 +13,20 @@
 
     <fragment
         android:id="@+id/nav_login"
-        android:name="com.example.listajogos.fragment_login"
-        android:label="@string/menu_home"
+        android:name="com.example.listajogos.ui.login.LoginFragment"
+        android:label="Login"
         tools:layout="@layout/fragment_login" />
+
+    <fragment
+        android:id="@+id/nav_cadastro"
+        android:name="com.example.listajogos.ui.cadastro.CadastroFragment"
+        android:label="Cadastro"
+        tools:layout="@layout/fragment_cadastro" />
     <fragment
         android:id="@+id/nav_gallery"
         android:name="com.example.listajogos.ui.gallery.GalleryFragment"
         android:label="@string/menu_gallery"
         tools:layout="@layout/fragment_gallery" />
+
 
 </navigation>

@@ -33,7 +33,7 @@ class GalleryFragment : Fragment() {
         binding.listaJogos.removeAllViews()  // Limpa a lista antes de carregar
 
         val db = DBHelper(requireContext(), null)
-        val cursor = db.getName()
+        val cursor = db.getGames()
 
         if (cursor != null && cursor.moveToFirst()) {
             do {
@@ -113,7 +113,7 @@ class GalleryFragment : Fragment() {
             .setTitle("Editar Jogo")
             .setView(layout)
             .setPositiveButton("Salvar") { _, _ ->
-                db.updateName(nomeAntigo, inputNome.text.toString(), inputPlataforma.text.toString())
+                db.updateGame(nomeAntigo, inputNome.text.toString(), inputPlataforma.text.toString())
                 listarJogos()
             }
             .setNegativeButton("Cancelar", null)
@@ -127,7 +127,7 @@ class GalleryFragment : Fragment() {
             .setTitle("Excluir Jogo")
             .setMessage("Tem certeza que deseja excluir \"$nome\"?")
             .setPositiveButton("Sim") { _, _ ->
-                db.deleteName(nome)
+                db.deleteGame(nome)
                 listarJogos()
             }
             .setNegativeButton("Cancelar", null)

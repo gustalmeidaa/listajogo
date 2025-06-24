@@ -75,7 +75,7 @@ class HomeFragment : Fragment() {
         val db = DBHelper(this.requireContext(), null)
         val nomeJogo = binding.nomeJogo.text.toString()
         val plataforma = binding.listaPlataformas.selectedItem.toString()
-        db.addName(nomeJogo, plataforma)
+        db.addGame(nomeJogo, plataforma)
         Toast.makeText(this.requireContext(),nomeJogo + " adicionado no banco!",Toast.LENGTH_LONG).show()
         binding.nomeJogo.text.clear()
     }
