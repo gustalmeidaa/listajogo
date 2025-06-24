@@ -48,11 +48,10 @@ class HomeFragment : Fragment() {
 
         // Set an item selected listener
         listaPlataformas.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
+            override fun onItemSelected(parent: AdapterView<*>, view: View?, position: Int, id: Long) {
                 // Get the selected item
                 val selectedItem = parent.getItemAtPosition(position).toString()
                 // Show a toast message or handle the selection
-                Toast.makeText(requireContext(), "Selected: $selectedItem", Toast.LENGTH_SHORT).show()
             }
 
             override fun onNothingSelected(parent: AdapterView<*>) {
