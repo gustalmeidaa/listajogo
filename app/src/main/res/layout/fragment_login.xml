@@ -146,7 +146,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="48dp"
-        android:text="Copyright reservado a Gustavo Heubel e Gabriel Brandão."
+        android:text="Copyright reserved to Gustavo Heubel and Gabriel Brandão."
         android:textColor="#CCCCCC"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
