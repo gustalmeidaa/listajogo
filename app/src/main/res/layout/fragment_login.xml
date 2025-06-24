@@ -7,52 +7,16 @@
     android:background="@drawable/background_gradient">
 
     <TextView
-        android:id="@+id/textViewLogo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
-        android:text="GameReview"
-        android:textColor="@android:color/white"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/iconProfile"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:layout_marginEnd="16dp"
-        android:src="@drawable/baseline_person_outline_24"
-        app:layout_constraintBottom_toBottomOf="@+id/textViewLogo"
-        app:layout_constraintEnd_toStartOf="@+id/iconMenu"
-        app:layout_constraintTop_toTopOf="@+id/textViewLogo"
-        app:tint="@android:color/white" />
-
-    <ImageView
-        android:id="@+id/iconMenu"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:layout_marginEnd="24dp"
-        android:src="@drawable/outline_apps_24"
-        app:layout_constraintBottom_toBottomOf="@+id/iconProfile"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/iconProfile"
-        app:tint="@android:color/white" />
-
-    <TextView
         android:id="@+id/textViewTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:text="User Registration"
+        android:text="Cadastro de Jogo"
         android:textColor="@android:color/white"
         android:textSize="28sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewLogo" />
+        tools:layout_editor_absoluteY="131dp" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textFieldUsername"
@@ -91,55 +55,37 @@
         app:boxStrokeWidthFocused="0dp"
         app:layout_constraintEnd_toEndOf="@+id/textFieldUsername"
         app:layout_constraintStart_toStartOf="@+id/textFieldUsername"
-        app:layout_constraintTop_toBottomOf="@id/textFieldUsername">
+        app:layout_constraintTop_toBottomOf="@id/textFieldUsername"/>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/edit_text_background"
-            android:inputType="textEmailAddress"
-            android:textColor="@android:color/black" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textFieldPassword"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-        android:layout_width="0dp"
+    <Spinner
+        android:id="@+id/lista_plataformas"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:hint="Password"
-        android:textColorHint="#999999"
-        app:boxStrokeWidth="0dp"
-        app:boxStrokeWidthFocused="0dp"
-        app:layout_constraintEnd_toEndOf="@+id/textFieldEmail"
-        app:layout_constraintStart_toStartOf="@+id/textFieldEmail"
-        app:layout_constraintTop_toBottomOf="@id/textFieldEmail"
-        app:passwordToggleEnabled="true"
-        app:passwordToggleTint="@color/black">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/edit_text_background"
-            android:inputType="textPassword"
-            android:textColor="@android:color/black" />
-
-    </com.google.android.material.textfield.TextInputLayout>
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="60dp"
+        android:backgroundTint="#000000"
+        android:minHeight="48dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textFieldUsername" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonCallToAction"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="52dp"
         android:background="@drawable/button_background"
         android:text="Register"
         android:textAllCaps="false"
         android:textColor="@android:color/white"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/textFieldPassword"
-        app:layout_constraintStart_toStartOf="@+id/textFieldPassword"
-        app:layout_constraintTop_toBottomOf="@+id/textFieldPassword" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lista_plataformas" />
 
     <TextView
         android:id="@+id/textViewFooter"
